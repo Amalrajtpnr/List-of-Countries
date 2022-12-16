@@ -1,38 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  width: 100vw;
+  height: auto;
+  background-color: hsl(207, 26%, 17%);
   min-height: 100vh;
+}
+
+.navigation {
+  width: 100%;
+  height: 10vh;
+  background-color: hsl(209, 23%, 22%);
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 70px;
+  box-sizing: border-box;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 600;
+  color: hsl(0, 0%, 100%);
+}
+
+.mode {
+  font-size: medium;
+  font-weight: 400;
+  color: hsl(0, 0%, 100%);
+  margin-left: 10px;
+}
+
+.input {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 70px;
+  box-sizing: border-box;
+}
+
+.search {
+  background-color: hsl(209, 23%, 22%);
+  width: 30%;
+  height: 40%;
+  border-radius: 5px;
+}
+
+.button {
+  background-color: hsl(209, 23%, 22%);
+  width: 12%;
+  height: 70%;
+  font-size: 13px;
+  font-weight: 200;
+  color: white;
+  border-radius: 5px;
+}
+
+.cabins {
+  width: 100%;
+  height: auto;
+  min-height: 80%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  place-items: center;
+  row-gap: 30px;
+  padding-top: 50px;
+  column-gap: -30px;
+}
+
+.view {
+  width: 10%;
+  height: 40%;
+  background-color: hsl(209, 23%, 22%);
+  display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border: none;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 600px) {
+  .cabins {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    place-items: center;
+    padding-top: 12px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .navigation {
+    padding-inline: 27px;
+    box-sizing: border-box;
+  }
+
+  .mode {
+    font-size: 14px;
+  }
+
+  .input {
+    padding-inline: 27px;
+    box-sizing: border-box;
+  }
+
+  .search {
+    width: 65%;
+    height: 30%;
+  }
+
+  .button {
+    width: 20%;
+    height: 40%;
+    font-size: 11px;
   }
 }
